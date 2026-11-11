@@ -12,7 +12,7 @@
 @media(max-width:380px){.hero-secondary{margin:20px 0 0;display:flex}.hero-art{height:310px}.hero-grid{gap:20px}h1,h1 em{letter-spacing:-3px}h1{font-size:53px}.service h3{font-size:21px}.steps{grid-template-columns:1fr}.contact h2{font-size:37px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.hero-logo{transform:none}.motion-enabled .reveal{opacity:1;transform:none}}
 
-.cafe-live{display:block;background:#eee}.cafe-live>img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(1);transition:filter .35s,transform .5s}.cafe-live:hover>img{filter:grayscale(0);transform:scale(1.025)}.cafe-live .concept-label{background:#111;color:#fff;padding:7px 10px;border-radius:3px}.project-actions{display:flex;gap:23px;margin-top:17px;font-size:11px;color:#b5b5b5}.project-actions a{border-bottom:1px solid #666;padding-bottom:4px}.project-actions a:hover{color:#fff}
+.cafe-live{display:block;background:#eee}.cafe-live>img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;filter:none;transition:transform .5s}.cafe-live:hover>img{filter:grayscale(0);transform:scale(1.025)}.cafe-live .concept-label{background:#111;color:#fff;padding:7px 10px;border-radius:3px}.project-actions{display:flex;gap:23px;margin-top:17px;font-size:11px;color:#b5b5b5}.project-actions a{border-bottom:1px solid #666;padding-bottom:4px}.project-actions a:hover{color:#fff}
 
 /* Put the work at the center of the page, with the cafe's own colors. */
 .work .section-heading{display:block;text-align:center;max-width:760px;margin:38px auto 45px}
@@ -21,3 +21,31 @@
 .work .concept-note{text-align:center;max-width:820px;margin:30px auto 0}
 .project-preview.cafe-live,.project-preview.cafe-live>img,.project-preview.cafe-live:hover>img{filter:none}
 @media(max-width:760px){.work .section-heading{margin:28px auto 35px}.work .section-heading>p{margin-top:18px}.work .concept-note{text-align:left}}
+
+/* Readable UI typography at normal browser zoom. Illustration mockups retain their own scale. */
+body{font-size:16px}
+nav{font-size:15px;gap:26px}.nav-cta{padding:14px 19px}
+.brand{font-size:18px}.brand small{font-size:10px;letter-spacing:1.7px}
+.eyebrow,.micro,.section-label{font-size:12px;line-height:1.6;letter-spacing:1px}
+.hero-top>.micro{font-size:11px;color:#b4b4b4}.hero-top .eyebrow{color:#ddd}
+.lead{font-size:18px;line-height:1.8;max-width:450px;color:#c3c3c3}
+.button{font-size:16px;padding:18px 23px}.hero-secondary{font-size:15px;color:#ccc}
+.hero-bottom p,.hero-bottom>.micro{font-size:12px;color:#bdbdbd;letter-spacing:.6px}.hero-bottom a{font-size:14px}
+.coordinate,.art-bottom{font-size:10px;color:#aaa}.art-tag{font-size:13px;color:#ddd}
+.section-heading>p{font-size:17px;line-height:1.8;color:#555;max-width:390px}.section-heading h2>span{color:#686868}
+.service h3{font-size:25px;max-width:none}.service-title p{font-size:15px;line-height:1.7;color:#5d5d5d}
+.service-detail>p{font-size:16px;line-height:1.8;color:#565656}.chips span{font-size:12px;color:#555;padding:7px 10px}.service .number{font-size:12px;color:#666}
+.work .section-heading p{font-size:17px;color:#c2c2c2;max-width:650px}
+.project-caption h3{font-size:24px}.project-caption p{font-size:15px;color:#bbb;line-height:1.6}.project-caption>span{font-size:12px;color:#aaa}
+.project-actions{font-size:14px;color:#ddd;gap:25px}.project-actions a{border-color:#999;padding-bottom:6px}.concept-note{font-size:13px;line-height:1.8;color:#b8b8b8}
+.fit-copy>p{font-size:17px;line-height:1.8;color:#565656;max-width:390px}.scenario-tabs button{font-size:16px;color:#5d5d5d;padding:21px 0}.scenario-kicker{font-size:11px;color:#626262}
+.scenario-panel p{font-size:16px;line-height:1.8;color:#555}.scenario-panel ul{font-size:15px;line-height:1.9;color:#555}.scenario-panel .button{font-size:15px}
+.manifesto p{font-size:25px}.manifesto p span{color:#686868}.manifesto small{font-size:11px;color:#646464}
+.steps h3{font-size:20px;line-height:1.4}.steps p{font-size:16px;line-height:1.85;color:#555}.steps small{font-size:11px;line-height:1.7;color:#666}.steps article>span{font-size:13px;color:#666}
+.faq .eyebrow{font-size:12px;color:#606060}.faq-list summary,.faq summary{font-size:16px;line-height:1.6}.faq details p{font-size:16px;line-height:1.85;color:#555}
+.contact .section-label{font-size:12px;color:#b8b8b8}.contact-grid>div>p{font-size:17px;line-height:1.85;color:#bfbfbf}.contact-sign{font-size:15px;line-height:1.7;color:#d0d0d0}
+.form-heading{font-size:12px;color:#c7c7c7;line-height:1.6}label{font-size:15px;color:#ddd;margin-top:23px}input,select,textarea{font-size:16px;line-height:1.6;color:#f1f1f1;padding:11px 0 14px}input::placeholder,textarea::placeholder{color:#a9a9a9}.form-note{font-size:13px;line-height:1.8;color:#b8b8b8}#download{font-size:15px}
+footer p,footer>small{font-size:12px;color:#bbb}footer .brand{font-size:16px}footer .brand small{font-size:9px}
+dialog>p:not(.eyebrow){font-size:16px;color:#555}dialog ul{font-size:15px;line-height:1.9}dialog .dialog-note{font-size:13px!important}
+@media(max-width:1100px){nav{gap:18px;font-size:14px}.nav-cta{padding:13px}.service{padding:25px}.service h3{font-size:23px}.service-title p{font-size:14px}.chips span{font-size:11px}}
+@media(max-width:760px){.header-inner{height:86px}nav{top:86px;font-size:16px}.menu{font-size:14px;padding:11px 16px}.brand{font-size:16px}.brand small{font-size:9px}.hero .eyebrow{font-size:12px}.lead{font-size:17px;line-height:1.85;max-width:none}.hero-secondary{display:flex;margin:22px 0 0;font-size:15px;gap:20px}.hero-bottom{display:block}.hero-bottom p{font-size:12px}.hero-bottom a{font-size:14px;margin-top:18px;justify-content:space-between}.art-tag{font-size:12px;padding:10px 12px}.coordinate,.art-bottom{font-size:9px}.section-label{font-size:12px}.section-heading>p{font-size:16px;line-height:1.85}.service h3{font-size:25px}.service-title p,.service-detail>p{font-size:16px;line-height:1.8}.chips span{font-size:12px}.service .number{font-size:12px}.service-detail .chips{padding-right:45px}.work .section-heading p{font-size:16px}.project-caption h3{font-size:23px}.project-caption p{font-size:15px}.project-actions{font-size:14px;gap:20px}.concept-note{font-size:13px}.fit-copy>p{font-size:16px}.scenario-tabs button{font-size:16px}.scenario-panel p{font-size:16px}.scenario-panel ul{font-size:15px}.scenario-panel .button{font-size:15px;padding:17px;gap:15px}.manifesto p{font-size:19px;line-height:1.6}.manifesto-inner{align-items:flex-start}.steps{grid-template-columns:1fr;gap:30px}.steps h3{font-size:22px}.steps p{font-size:16px}.steps small{font-size:11px}.faq .eyebrow{font-size:12px}.faq summary{font-size:16px}.faq details p{font-size:16px}.contact .section-label{font-size:12px}.contact-grid>div>p{font-size:17px}.contact-sign{font-size:15px}.form-heading{font-size:12px}label{font-size:15px}input,select,textarea{font-size:16px}.form-note{font-size:13px}footer p,footer>small{font-size:12px}.button{font-size:16px}}
