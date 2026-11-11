@@ -1,32 +1,27 @@
-# One Code — sitio web
+# ONE CODE — Estudio digital
 
-Sitio estático para una empresa de desarrollo web, sistemas a medida y automatización de procesos en Guatemala.
-
-## Archivos
-
-- `index.html`: estructura y contenido.
-- `styles.css`: estilos base y adaptación a celulares.
-- `one-code.css`: identidad visual de One Code y efectos.
-- `app.js`: menú, ventanas de proyectos, formulario local y animaciones.
-- `icon.svg`: icono del sitio.
+Rediseño local con el monograma proporcionado por el propietario.
 
 ## Vista previa
+Abre index.html directamente o sirve esta carpeta con un servidor estático. No necesita compilación. Las fuentes de Google tienen alternativas locales de sistema.
 
-Abre `index.html` en tu navegador. No necesita instalación ni compilación. Las fuentes de Google Fonts requieren conexión a internet; hay fuentes alternativas configuradas.
+## Estructura
+- index.html: contenido y secciones.
+- styles.css: diseño adaptable y animaciones con movimiento reducido.
+- app.js: menú móvil, conceptos y resumen de proyecto.
+- assets/one-code-original.png: logo original, conservado sin cambios.
+- assets/one-code-logo.svg: encuadre SVG del logo original incrustado; no es un trazado vectorial.
 
-También puedes servir esta carpeta con un servidor estático de tu elección.
+## Estado
+Los ejemplos Casa Botánica y panel de gestión son conceptos ilustrativos. El formulario genera un resumen local y permite descargarlo; no envía solicitudes. Falta conectar el canal real de contacto. Los archivos antiguos one-code.css e icon.svg no se cargan en esta versión.
 
-## Editar
+Código y demo incluidos en el repositorio one-code-web.
 
-Modifica los textos en `index.html`, los ajustes visuales en `one-code.css` y las interacciones en `app.js`.
+## Dirección visual actual
+Blanco, negro y grises. Portada con logo invertido mediante CSS y movimiento reducido compatible. Sección interactiva de necesidades con preselección del servicio. Composición orientada por las referencias TEKÜ y Haricode, con contenido y marca propios.
 
-## Estado de la propuesta
-
-- Los proyectos del portafolio son conceptos ilustrativos, no clientes reales.
-- El formulario genera y descarga un resumen local; no envía datos ni recibe solicitudes.
-- Pendiente conectar los canales reales de contacto.
-- Los efectos respetan la preferencia de movimiento reducido del dispositivo.
-
-## Publicación
-
-Los archivos están en la raíz para facilitar su alojamiento como sitio estático. Subir este código al repositorio no activa automáticamente GitHub Pages ni cambia la publicación existente en Sites.
+## Proyecto Café Estudio
+- `examples/cafe-estudio/`: código fuente React y documentación.
+- `projects/cafe-estudio/`: demo compilada con rutas relativas, enlazada desde el portafolio de ONE CODE.
+- Para actualizar: ejecutar npm ci y npm run build en el código fuente, y copiar dist a projects/cafe-estudio.
+- Demo sin pedidos reales, con datos ilustrativos y WhatsApp pendiente.

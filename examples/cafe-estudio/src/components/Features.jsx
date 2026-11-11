@@ -1,0 +1,3 @@
+import { Wifi, Laptop, Bean, UsersRound } from 'lucide-react';
+const features=[{icon:Wifi,title:'Wi-Fi gratis',text:'Conecta con tus mejores ideas'},{icon:Laptop,title:'Tu espacio de trabajo',text:'Mesas cómodas y enchufes'},{icon:Bean,title:'Café de especialidad',text:'El gusto por los pequeños detalles'},{icon:UsersRound,title:'Ambiente acogedor',text:'Para compartir o concentrarte'}];
+export default function Features(){return <section className="features container" aria-label="Lo que hace especial tu visita">{features.map(({icon:Icon,title,text})=><article key={title} className="feature"><Icon strokeWidth={1.3}/><div><h2>{title}</h2><p>{text}</p></div></article>)}</section>;}

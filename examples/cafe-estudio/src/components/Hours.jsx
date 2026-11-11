@@ -1,0 +1,2 @@
+import { Clock3 } from 'lucide-react';
+export default function Hours(){return <article className="hours-panel visit-card"><div className="visit-icon"><Clock3 size={25}/></div><h3>Siempre hay una buena hora.</h3><dl className="hours-list"><div><dt>Lunes a viernes</dt><dd>7:00 — 20:00</dd></div><div><dt>Sábado y domingo</dt><dd>8:00 — 18:00</dd></div></dl><p className="panel-note">Horarios de ejemplo, pendientes de confirmar.</p></article>;}
