@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: './',
-  esbuild: { jsx: 'automatic' },
+  base: "./",
+  esbuild: { jsx: "automatic" },
 });

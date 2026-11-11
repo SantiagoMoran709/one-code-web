@@ -1,0 +1,34 @@
+{
+  "cheesecake": {
+    "width": 800,
+    "height": 533
+  },
+  "croissant": {
+    "width": 800,
+    "height": 640
+  },
+  "espresso": {
+    "width": 800,
+    "height": 536
+  },
+  "frappe": {
+    "width": 800,
+    "height": 534
+  },
+  "hero": {
+    "width": 1800,
+    "height": 1200
+  },
+  "interior": {
+    "width": 1800,
+    "height": 1190
+  },
+  "latte": {
+    "width": 1800,
+    "height": 1007
+  },
+  "sandwich": {
+    "width": 800,
+    "height": 532
+  }
+}

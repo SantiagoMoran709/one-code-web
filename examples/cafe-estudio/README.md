@@ -27,12 +27,15 @@ App.jsx también compone la galería, la sección de visita y las ventanas de de
 ## Datos que deben confirmarse
 Este es un concepto de demostración, no la web de un negocio verificado. Los productos, ingredientes, precios, beneficios, horarios y dirección son ejemplos. No se reciben pedidos ni se realizan pagos.
 
-Para activar WhatsApp, introducir el número internacional real (solo dígitos) en `src/data/cafe.jsx`, propiedad `cafe.whatsapp`. Mientras esté vacío, el botón explica que falta conectarlo. Confirmar también dirección, horarios, recetas y fotografías antes de publicar.
+El botón de visita permite preparar, editar y copiar una consulta local con los favoritos. Para activar WhatsApp, introducir el número internacional real (solo dígitos) en `src/data/cafe.jsx`, propiedad `cafe.whatsapp`. Mientras esté vacío, no se muestra ningún enlace de envío y se indica que la consulta es local. Confirmar también dirección, horarios, recetas y fotografías antes de publicar.
 
 ## Fotografías
-Archivos locales de referencia de Unsplash. Las URLs de origen están en `public/images/sources.txt`. No representan el local real. Las imágenes no son generadas por IA.
+Archivos locales de referencia de Unsplash. Las URLs de origen están en `public/images/sources.txt`. No representan el local real. Las imágenes no son generadas por IA. Se sirven en WebP con dos variantes responsivas.
 
-Incluido en one-code-web: fuente en examples/cafe-estudio y demo en projects/cafe-estudio.
+Código fuente en one-code-web/examples/cafe-estudio y demo publicada en one-code-web/projects/cafe-estudio. La copia del escritorio se conserva como proyecto independiente.
 
 ## Organización visual revisada
 Portada → beneficios → presentación → menú → ambiente → horarios y ubicación → pie de página. La interfaz usa una sola hoja de estilos y conserva filtros, favoritos y detalles.
+
+## Mejora posterior a Auditoría 01
+Imágenes WebP responsivas; fuentes locales con licencias OFL; dimensiones intrínsecas; carga diferida y prioridad en portada; navegación activa; controles táctiles ampliados; animaciones con movimiento reducido; consulta editable y copiable. Ver AUDITORIA.md para las comprobaciones y límites.
