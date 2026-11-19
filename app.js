@@ -2,16 +2,17 @@ const contactConfig = {
   whatsappNumber: '50253061697',
 };
 
-const whatsappMessages = {
-  general: 'Hola, Santiago. Vi ONE CODE y quisiera información para crear una página para mi negocio',
-  pagina: 'Hola, Santiago. Vi ONE CODE y quisiera cotizar una página informativa para mi negocio.',
-  menu: 'Hola, Santiago. Vi ONE CODE y quisiera cotizar un menú o catálogo digital para mi negocio.',
-  rediseno: 'Hola, Santiago. Vi ONE CODE y quisiera cotizar un rediseño web para mi negocio.',
+const quoteRequests = {
+  general: 'desarrollar una página web',
+  pagina: 'desarrollar una página informativa',
+  menu: 'desarrollar un menú o catálogo digital',
+  rediseno: 'rediseñar el sitio web',
 };
 
 document.querySelectorAll('[data-whatsapp]').forEach(link => {
-  link.href = 'https://wa.me/' + contactConfig.whatsappNumber + '?text='
-    + encodeURIComponent(whatsappMessages[link.dataset.whatsapp]);
+  const request = quoteRequests[link.dataset.whatsapp];
+  const message = `Hola, Santiago. Conocí ONE CODE y me gustaría solicitar una cotización para ${request} para mi negocio. ¿Podrías indicarme qué información necesitas para preparar una propuesta?`;
+  link.href = 'https://wa.me/' + contactConfig.whatsappNumber + '?text=' + encodeURIComponent(message);
   link.hidden = false;
 });
 
