@@ -82,7 +82,7 @@ nav a, .footer-inner a {
   align-items: center;
   min-height: 44px;
   gap: .5rem;
-  font-size: .9375rem;
+  font-size: clamp(.875rem, 2.2vw, .9375rem);
   font-weight: 600;
   text-decoration: none;
   text-underline-offset: .24em;
@@ -206,7 +206,7 @@ h3 {
   text-wrap: initial;
 }
 
-.service p, .example-copy > p:not(.label), .contact p {
+.service p, .demos-intro, .demo-copy > p:not(.demo-label), .contact p {
   margin-top: .85rem;
   color: var(--muted);
   font-size: 1.0625rem;
@@ -223,29 +223,69 @@ h3 {
   text-underline-offset: .22em;
 }
 
-.example { background: #efede8; }
+.demos { background: #efede8; }
 
-.example-grid, .contact-grid {
+.demo-gallery {
   display: grid;
-  grid-template-columns: 1fr 1.55fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 27rem), 1fr));
+  gap: 1.5rem;
+  margin-top: clamp(1.5rem, 4vw, 2.75rem);
+}
+
+.demo-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+  border: 1px solid var(--rule);
+  border-radius: .75rem;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.demo-preview {
+  display: grid;
   align-items: center;
-  gap: clamp(1.5rem, 6vw, 5.5rem);
+  padding: clamp(.75rem, 3vw, 2rem);
+  background: #dedbd4;
 }
 
-.label {
-  margin-bottom: .65rem;
-  color: var(--muted);
-  font-weight: 650;
-}
-
-.example-copy .button, .contact .button { margin-top: 1.5rem; }
-
-.example-image {
+.demo-preview img {
   width: 100%;
   height: auto;
-  overflow: hidden;
-  border: 1px solid var(--rule);
-  border-radius: .5rem;
+  aspect-ratio: 1425 / 990;
+  object-fit: cover;
+  object-position: top;
+  border-radius: .375rem;
+  box-shadow: 0 .25rem 1rem #18181826;
+}
+
+.demo-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.demo-label {
+  margin-bottom: .75rem;
+  color: var(--muted);
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+.demo-copy h3 { font-size: clamp(1.9rem, 3.8vw, 3.25rem); }
+
+.demo-copy > p:not(.demo-label) { margin-bottom: 1.4rem; }
+.demo-copy .button { margin-top: auto; }
+.demo-card:only-child .button { margin-top: 0; }
+.contact .button { margin-top: 1.5rem; }
+
+@media (min-width: 701px) {
+  .demo-card:only-child {
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
 }
 
 .contact {
@@ -255,8 +295,10 @@ h3 {
 }
 
 .contact-grid {
-  grid-template-columns: 1fr 1.15fr;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
   align-items: start;
+  gap: clamp(1.5rem, 6vw, 5.5rem);
 }
 
 .contact p {
@@ -307,7 +349,7 @@ textarea { display: block; resize: vertical; }
 }
 
 @media (max-width: 700px) {
-  .hero, .example-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero, .contact-grid { grid-template-columns: minmax(0, 1fr); }
 
   .hero-mark {
     aspect-ratio: 1.65;
@@ -334,5 +376,5 @@ textarea { display: block; resize: vertical; }
   }
 
   .brand { align-self: flex-start; }
-  nav { gap: 0; justify-content: space-between; }
+  nav { flex-wrap: wrap; gap: 0 .5rem; justify-content: space-between; }
 }
