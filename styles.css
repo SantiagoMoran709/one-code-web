@@ -372,10 +372,7 @@ h1, h2 { font-weight: 500; }
   background: #080808;
   overflow: hidden;
 }
-.hero-top, .hero-bottom { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: #bdbdbd; font-size: .75rem; }
-.hero-top { letter-spacing: .08em; }
-.eyebrow { display: flex; align-items: center; gap: .7rem; }
-.dot { width: 6px; height: 6px; border-radius: 50%; background: white; box-shadow: 0 0 0 4px #ffffff12; }
+.hero-bottom { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: #bdbdbd; font-size: .75rem; }
 .hero-copy { padding-block: 2rem 3rem; }
 h1 { font-size: clamp(3rem, 5.3vw, 5rem); letter-spacing: -.055em; line-height: 1.08; }
 h1 em, .contact em { font-style: normal; color: #aaa; font-weight: 400; }
@@ -449,8 +446,6 @@ h2 span { color: #686868; }
 }
 @media (max-width: 520px) {
   .hero { padding-top: 1.5rem; gap: 1rem; }
-  .hero-top > span { display: none; }
-  .hero-top { font-size: .65rem; }
   h1 { font-size: 2.9rem; }
   .hero-copy > p { font-size: 1.0625rem; }
   .hero-mark { height: 320px; }
