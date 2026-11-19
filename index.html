@@ -18,8 +18,8 @@
   <meta property="og:image:height" content="682">
   <meta property="og:image:alt" content="Monograma OC de ONE CODE">
   <link rel="icon" href="assets/one-code-logo.svg">
-  <link rel="stylesheet" href="styles.css?v=portada-2">
-  <script src="app.js?v=portada-1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=portada-3">
+  <script src="app.js?v=portada-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -27,7 +27,7 @@
     <div class="wrap header-inner">
       <a class="brand" href="#inicio">
         <img src="assets/one-code-logo.svg" alt="" width="34" height="31">
-        <span>ONE CODE</span>
+        <span>ONE CODE<small>DESARROLLO WEB</small></span>
       </a>
       <nav aria-label="Principal">
         <a href="#inicio">Inicio</a>
@@ -40,34 +40,34 @@
 
   <main id="contenido" tabindex="-1">
     <section class="wrap hero" id="inicio" aria-labelledby="inicio-titulo" tabindex="-1">
-      <div class="hero-copy">
-        <h1 id="inicio-titulo">Páginas web para negocios en Guatemala</h1>
+      <div class="hero-top"><p class="eyebrow"><i class="dot"></i> SANTIAGO · DESARROLLADOR WEB</p><span>GUATEMALA</span></div><div class="hero-copy">
+        <h1 id="inicio-titulo">Páginas web para negocios <em>en Guatemala.</em></h1>
         <p>Soy Santiago, desarrollador web independiente en Guatemala. Creo sitios para que tus clientes puedan conocer tu negocio y encontrar lo que buscan desde el celular.</p>
         <div class="actions">
           <a class="button" data-whatsapp="general" hidden>Cotizar por WhatsApp <span aria-hidden="true">↗</span></a>
-          <a class="button" id="demo-action" href="#ejemplo">Ver demo <span aria-hidden="true">↓</span></a>
+          <a class="button button-outline" id="demo-action" href="#ejemplo">Ver demo <span aria-hidden="true">↓</span></a>
         </div>
       </div>
-      <div class="hero-mark">
-        <img src="assets/one-code-logo.svg" alt="Monograma OC de ONE CODE" width="270" height="247">
-      </div>
+      <div class="hero-mark" aria-hidden="true"><div class="grid-art"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="scan-line"></div><span class="coordinate">ONE CODE / DESARROLLO WEB</span><span class="cross">+</span>
+        <img src="assets/one-code-logo.svg" alt="Monograma OC de ONE CODE" width="270" height="247"><div class="art-tag tag-one"><b>✳</b> Diseño que conecta</div><div class="art-tag tag-two"><b>&lt;/&gt;</b> Código que resuelve</div><div class="art-bottom"><span>DISEÑO → DESARROLLO → TU WEB</span><b>✳</b></div>
+      </div><div class="hero-bottom"><span>Una presencia que representa tu negocio.</span><a href="#servicios">Conocé los servicios ↓</a></div>
     </section>
 
     <section class="wrap section services" id="servicios" aria-labelledby="servicios-titulo" tabindex="-1">
-      <h2 id="servicios-titulo">Servicios</h2>
+      <p class="section-label">SERVICIOS</p><h2 id="servicios-titulo">Tu negocio.<br><span>Su siguiente versión.</span></h2>
       <div class="service-grid">
         <article class="service">
-          <h3>Página informativa</h3>
+          <span class="service-symbol" aria-hidden="true">↗</span><h3>Página informativa</h3>
           <p>Una página que presenta tu negocio, tus servicios, tus horarios y cómo encontrarte.</p>
           <a class="text-link" data-whatsapp="pagina" hidden>Cotizar página informativa por WhatsApp <span aria-hidden="true">↗</span></a>
         </article>
         <article class="service">
-          <h3>Menú o catálogo digital</h3>
+          <span class="service-symbol" aria-hidden="true">▦</span><h3>Menú o catálogo digital</h3>
           <p>Un menú o catálogo con fotos y precios que tus clientes pueden consultar desde el celular.</p>
           <a class="text-link" data-whatsapp="menu" hidden>Cotizar menú o catálogo por WhatsApp <span aria-hidden="true">↗</span></a>
         </article>
         <article class="service">
-          <h3>Rediseño web</h3>
+          <span class="service-symbol" aria-hidden="true">✳</span><h3>Rediseño web</h3>
           <p>Una versión renovada de tu sitio con contenido mejor organizado y navegación más clara en el celular.</p>
           <a class="text-link" data-whatsapp="rediseno" hidden>Cotizar rediseño web por WhatsApp <span aria-hidden="true">↗</span></a>
         </article>
@@ -76,7 +76,7 @@
 
     <section class="demos section" id="ejemplo" aria-labelledby="ejemplo-titulo" tabindex="-1">
       <div class="wrap">
-        <h2 id="ejemplo-titulo">Demostraciones</h2>
+        <p class="section-label">DEMOSTRACIONES</p><h2 id="ejemplo-titulo">Ideas que toman forma.</h2>
         <p class="demos-intro">Explorá ejemplos de lo que puedo crear para tu negocio.</p>
         <div class="demo-gallery">
           <article class="demo-card" aria-labelledby="cafe-titulo">
@@ -95,34 +95,7 @@
     </section>
 
     <section class="contact section" id="contacto" aria-labelledby="contacto-titulo" tabindex="-1">
-      <div class="wrap contact-grid">
-        <div>
-          <h2 id="contacto-titulo">Contacto</h2>
-          <div data-whatsapp-contact hidden>
-            <p>Contame qué necesitás para tu negocio. Podés revisar el mensaje en WhatsApp antes de enviarlo.</p>
-            <a class="button button-light" data-whatsapp="general" hidden>Cotizar por WhatsApp <span aria-hidden="true">↗</span></a>
-          </div>
-          <p data-download-copy>Contame qué web tenés en mente en este formulario. Podés guardar el resumen de tu idea como un archivo de texto en tu dispositivo.</p>
-        </div>
-        <form id="brief" autocomplete="off">
-          <label for="business">Tu nombre o el de tu negocio</label>
-          <input id="business" name="business" maxlength="100" required>
-
-          <label for="service">¿Qué te gustaría crear?</label>
-          <select id="service" name="service">
-            <option>Página informativa</option>
-            <option>Menú o catálogo digital</option>
-            <option>Rediseño web</option>
-            <option>Necesito orientación</option>
-          </select>
-
-          <label for="need">Contá un poco sobre tu idea</label>
-          <textarea id="need" name="need" rows="3" maxlength="2000" required></textarea>
-
-          <button class="button button-light" type="submit" disabled>Descargar resumen <span aria-hidden="true">↓</span></button>
-          <noscript><p>Activá JavaScript para descargar el resumen.</p></noscript>
-        </form>
-      </div>
+<div class="wrap contact-grid"><div><p class="section-label">CONTACTO</p><h2 id="contacto-titulo">Tu próxima web.<br><em>Empecemos a crear.</em></h2><p>Contame qué necesitás para tu negocio. Soy Santiago y te ayudo a definir una página clara, útil y fácil de consultar.</p></div><div class="contact-action"><span class="contact-symbol" aria-hidden="true">↗</span><a class="button button-light" data-whatsapp="general" hidden>Cotizar por WhatsApp <span aria-hidden="true">↗</span></a><p>Podés revisar el mensaje en WhatsApp antes de enviarlo.</p></div></div>
     </section>
   </main>
 

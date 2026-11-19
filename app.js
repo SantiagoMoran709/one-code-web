@@ -1,60 +1,38 @@
-// Agregá los ocho dígitos del WhatsApp de ONE CODE cuando Santiago confirme el número.
-const whatsappNumber = '';
-
-const whatsappMessages = {
-  general: 'Hola, Santiago. Vi ONE CODE y quisiera cotizar una página web para mi negocio.',
-  pagina: 'Hola, Santiago. Vi ONE CODE y quisiera cotizar una página informativa para mi negocio.',
-  menu: 'Hola, Santiago. Vi ONE CODE y quisiera cotizar un menú digital para mi negocio',
-  rediseno: 'Hola, Santiago. Vi ONE CODE y quisiera cotizar un rediseño del sitio web de mi negocio.',
+const contactConfig = {
+  whatsappNumber: '50253061697',
 };
 
-const brief = document.querySelector('#brief');
+const whatsappMessages = {
+  general: 'Hola, Santiago. Vi ONE CODE y quisiera información para crear una página para mi negocio',
+  pagina: 'Hola, Santiago. Vi ONE CODE y quisiera cotizar una página informativa para mi negocio.',
+  menu: 'Hola, Santiago. Vi ONE CODE y quisiera cotizar un menú o catálogo digital para mi negocio.',
+  rediseno: 'Hola, Santiago. Vi ONE CODE y quisiera cotizar un rediseño web para mi negocio.',
+};
 
-if (/^\d{8}$/.test(whatsappNumber)) {
-  document.querySelectorAll('[data-whatsapp]').forEach(link => {
-    const message = whatsappMessages[link.dataset.whatsapp];
-    link.href = 'https://wa.me/502' + whatsappNumber + '?text=' + encodeURIComponent(message);
-    link.hidden = false;
+document.querySelectorAll('[data-whatsapp]').forEach(link => {
+  link.href = 'https://wa.me/' + contactConfig.whatsappNumber + '?text='
+    + encodeURIComponent(whatsappMessages[link.dataset.whatsapp]);
+  link.hidden = false;
+});
+
+const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
+if ('IntersectionObserver' in window && !motionPreference.matches) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.service, .demo-card, .contact-grid').forEach(element => {
+    element.classList.add('reveal');
+    observer.observe(element);
   });
-
-  document.querySelector('#demo-action').classList.add('button-outline');
-  document.querySelector('[data-whatsapp-contact]').hidden = false;
-  document.querySelector('[data-download-copy]').hidden = true;
-  brief.hidden = true;
+  motionPreference.addEventListener('change', () => {
+    if (motionPreference.matches) {
+      document.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
+      observer.disconnect();
+    }
+  });
 }
-
-brief.querySelector('button').disabled = false;
-brief.addEventListener('input', event => {
-  if (event.target.matches('input, textarea')) {
-    event.target.setCustomValidity('');
-  }
-});
-
-brief.addEventListener('submit', event => {
-  event.preventDefault();
-
-  const business = brief.elements.business;
-  const need = brief.elements.need;
-  [business, need].forEach(field => {
-    field.setCustomValidity(field.value.trim() ? '' : 'Escribí algo en este campo.');
-  });
-
-  if (!brief.reportValidity()) return;
-
-  const summary = [
-    'ONE CODE — Resumen del proyecto',
-    '',
-    'Nombre o negocio: ' + business.value.trim(),
-    'Servicio: ' + brief.elements.service.value,
-    '',
-    'La idea:',
-    need.value.trim(),
-  ].join('\r\n');
-
-  const url = URL.createObjectURL(new Blob([summary], { type: 'text/plain;charset=utf-8' }));
-  const download = document.createElement('a');
-  download.href = url;
-  download.download = 'ONE-CODE-mi-proyecto.txt';
-  download.click();
-  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-});
